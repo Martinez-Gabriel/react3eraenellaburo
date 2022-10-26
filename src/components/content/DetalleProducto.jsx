@@ -15,6 +15,7 @@ const DetalleProducto = ({producto}) => {
           setCantidad(cantidad - 1)
         }
     }
+   
   }
     return (
         <>

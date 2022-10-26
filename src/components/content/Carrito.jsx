@@ -1,6 +1,8 @@
 import React, {useContext, useEffect, useState} from 'react';
 import { CarritoContext } from '../../components/context/CarritoContext';
 import { mostrarCarrito } from '../../utils/funcionesUtiles';
+import Swal from 'sweetalert2';
+
 
 const Carrito = () => {
     const {carrito, agregarProducto, quitarProducto} = useContext(CarritoContext)
@@ -21,7 +23,15 @@ const Carrito = () => {
         setCarritoLocal(prodMostrar)
     }, [carrito]);
     
-   const app = (carrito.length != 0) ? <div className='row'> {carritoLocal} </div> : <> <h1 className='containerProductos'>Carrito Vacio</h1></>
+    useEffect(() => {
+        mostrarAlerta();
+    }, []);
+
+    const mostrarAlerta = () => {
+        Swal.fire('Mensaje Simple');
+    }
+
+   const app = (carrito.length != 0) ? <div className='row'> {carritoLocal} <button>Terminar Compra</button></div> : <> <h1 className='containerProductos'>Carrito Vacio</h1></>
           
     return app
 }
