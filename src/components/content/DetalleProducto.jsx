@@ -33,7 +33,7 @@ const DetalleProducto = ({producto}) => {
   }
     return (
         <>
-        <div className='tamaño fluid containerProductos' >  
+        <div className='tamaño fluid' >  
           <div className="card mb-3 hola">
             
             <img src={producto[1].img} className="img-fluid rounded-start" alt={producto.nombre} />
@@ -61,8 +61,8 @@ const DetalleProducto = ({producto}) => {
               <h6 className="card-subtitle mb-2 text-muted">Stock Disponible: {producto[1].stock}</h6>
               <h4>${producto[1].precio}</h4>
               <p className='card-text'>{cantidad}</p>
-              <button className='btn btn-light' onClick={() => cantProducto("+")}>+</button>
-              <button className='btn btn-dark' onClick={() => cantProducto("-")}>-</button>
+              <button className='btn btn-light masMenosBtn' onClick={() => cantProducto("+")}>+</button>
+              <button className='btn btn-dark masMenosBtn' onClick={() => cantProducto("-")}>-</button>
               <button type="button" className="btn btn-primary"   onClick={() => { agregarProducto(producto, cantidad); mostrarAlerta();}}>Añadir a carrito</button>
             </div>
           <div className="card-body d-flex justify-content-center">

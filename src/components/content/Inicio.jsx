@@ -31,7 +31,7 @@ const Home = () => {
    
     return (
         <div   className={darkMode ? 'darkMode row containerProductos d-flex justify-content-center' : 'row containerProductos d-flex justify-content-center'} >
-            <h1 className='d-flex justify-content-center p-4'>Tienda APK!</h1>
+            <h1 className='d-flex justify-content-center p-4'>Mi APK! Tienda</h1>
             {productos}     
             
         </div>      

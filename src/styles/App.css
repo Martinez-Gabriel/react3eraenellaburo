@@ -60,7 +60,7 @@
 }
 
 .containerProductos{
-    padding-top: 5rem;
+    
     display: flex;
     justify-content: center;
 }
@@ -75,9 +75,35 @@
 }
 
 .footerAcomodate{
+    position:absolute;
     width: 100%;
+    bottom: 0 !important;
     height: 81px;
-    position: inherit;
-    bottom: 0%;
     left: 0%;
+    margin: auto;
+    z-index: 10;
+
   }
+
+  .imgPagosStyle {
+    margin: 1rem;
+    border: 2px solid green;
+    width: 400px;
+    margin-top: 3rem;
+  }
+  
+  .containerMetodoDePago{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .masMenosBtn {
+    margin: 5px;
+  }
+
+  .headerNav {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+    height: 80px;
+}
