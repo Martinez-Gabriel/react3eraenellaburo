@@ -9,6 +9,7 @@ import MetodoDePago from './content/MetodoDePago';
 import Producto from './content/Producto';
 import Footer from './content/Footer'
 import Categoria from './content/Categoria';
+import DatosComprador from './content/DatosComprador';
 const App = () => {
 
     return (
@@ -23,6 +24,7 @@ const App = () => {
               <Route path="/metodoDePago" element={<MetodoDePago/>} />
               <Route path="/Contacto" element={<Contacto/>} />
               <Route path="/carrito" element={<Carrito/>} />
+              <Route path="/DatosComprador" element={<DatosComprador/>} />
               <Route path="*" element={<h1>Error 404</h1>}/>
             </Routes>
             <Footer/>

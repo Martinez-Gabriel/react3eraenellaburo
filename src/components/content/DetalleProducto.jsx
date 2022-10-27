@@ -1,5 +1,17 @@
 import React, {useState, useContext} from 'react';
 import { CarritoContext } from '../../components/context/CarritoContext';
+import Swal from 'sweetalert2';
+
+const mostrarAlerta = () => {
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Se agrego el producto al carrito!',
+    showConfirmButton: false,
+    timer: 1700
+  })
+}
+
 const DetalleProducto = ({producto}) => {
   const [cantidad, setCantidad] = useState(1);
     
@@ -15,7 +27,9 @@ const DetalleProducto = ({producto}) => {
           setCantidad(cantidad - 1)
         }
     }
-   
+    
+    
+
   }
     return (
         <>
@@ -49,7 +63,7 @@ const DetalleProducto = ({producto}) => {
               <p className='card-text'>{cantidad}</p>
               <button className='btn btn-light' onClick={() => cantProducto("+")}>+</button>
               <button className='btn btn-dark' onClick={() => cantProducto("-")}>-</button>
-              <button type="button" className="btn btn-primary" onClick={() => agregarProducto(producto, cantidad)}>Añadir a carrito</button>
+              <button type="button" className="btn btn-primary"   onClick={() => { agregarProducto(producto, cantidad); mostrarAlerta();}}>Añadir a carrito</button>
             </div>
           <div className="card-body d-flex justify-content-center">
               <p className="card-text">{producto[1].miniDescripcion}</p>
